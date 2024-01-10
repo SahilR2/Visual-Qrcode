@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f7f7f7"
+    android:padding="2dp"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:id="@+id/codeLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_phone_icon"
+                    android:layout_width="87dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/top"
+                    android:tint="@color/blue_grey"
+                    app:layout_constraintHorizontal_bias="0.36"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="8dp"
+                    android:textSize="23sp"
+                    android:text="\nQR\nBAZAR"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/img_phone_icon"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/textVi"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:text="Your Customized Visual Qr in a Click"
+                android:gravity="center"
+                android:textColor="#808080"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+            <TextView
+                android:id="@+id/contactdetails"
+                android:layout_width="270dp"
+                android:layout_height="70dp"
+                android:text="\n\n   Contact Details :"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_phone_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <!-- CountryCodePicker -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:background="@drawable/rounded_corners"
+                    android:padding="10dp"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccp_autoDetectLanguage="true"
+                    app:ccp_countryAutoDetectionPref="SIM_ONLY"
+                    app:ccp_defaultLanguage="ENGLISH"
+                    app:ccp_rememberLastSelection="true"
+                    app:ccp_showPhoneCode="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- TextInputLayout -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/et_phone_num"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_weight="1"
+                    android:focusedByDefault="false"
+                    android:hint="Phone Number"
+                    android:textColorHint="@color/black"
+                    app:endIconMode="clear_text"
+                    app:errorEnabled="true"
+                    app:hintTextColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ccp"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="63dp"
+                        android:background="@drawable/rounded_corners"
+                        android:ems="10"
+                        android:inputType="phone|number"
+                        android:maxLength="10"
+                        android:singleLine="true"
+                        android:textColor="@color/black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_get_otp"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="295dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/rounded_button"
+                    android:minHeight="48dp"
+                    android:text="Get OTP"
+                    android:textColor="#FFFFFF"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@null"
+                    app:icon="@drawable/ic_baseline_perm_phone_msg_24"
+                    app:iconGravity="textStart"
+                    app:iconPadding="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.502"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/skip_otp"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="295dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_button"
+                    android:minHeight="48dp"
+                    android:text="Skip Registration"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    app:backgroundTint="@null"
+                    app:icon="@drawable/ic_baseline_perm_phone_msg_24"
+                    app:iconGravity="textStart"
+                    app:iconPadding="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.504"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/phoneLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_authenticate_num"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_margin="8dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="8dp"
+            android:text="OTP Verification :"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_msg_icon" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_otp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="30dp"
+            android:focusableInTouchMode="true"
+            android:focusedByDefault="false"
+            android:hint="OTP"
+            android:textColorHint="@color/blue_grey"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:hintTextColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/text_authenticate_num">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:background="@drawable/rounded_corners"
+                android:inputType="number"
+                android:maxLength="10"
+                android:singleLine="true" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_verify"
+                        style="@style/Widget.AppCompat.Button"
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_button"
+                        android:text="Verify"
+                        android:textColor="#FFFFFF"
+                        android:textAllCaps="false"
+                        app:backgroundTint="@null"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        tools:layout_editor_absoluteY="6dp"
+                        android:layout_marginEnd="8dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_cancel"
+                        style="@style/Widget.AppCompat.Button"
+                        android:layout_width="14dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_button"
+                        android:text="Cancel"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        app:backgroundTint="@null"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="0dp"
+                        android:layout_marginStart="8dp"/>
+
+
+            </LinearLayout>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
