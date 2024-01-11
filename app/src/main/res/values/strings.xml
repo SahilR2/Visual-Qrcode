@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="edittext_hint"><font style="" size="16">Provide URL, link, etc..</font></string>
+    <string name="tagline">Your Customized Visual Qr in a Click</string>
+    <string name="title_contact">Contact Details :</string>
+    <string name="title_brand">QR\nBAZAR</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="download">Download</string>
+    <string name="share">Share</string>
+    <string name="plans">Explore Plans</string>
 
 </resources>

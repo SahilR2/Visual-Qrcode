@@ -3,6 +3,6 @@
     <font
         android:fontStyle="italic"
         android:fontWeight="4000"
-        android:font="@font/MetropolisSemiBold"
+        android:font="@font/metropolis_semibold"
         />
 </font-family>
