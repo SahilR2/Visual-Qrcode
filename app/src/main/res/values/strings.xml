@@ -8,5 +8,8 @@
     <string name="download">Download</string>
     <string name="share">Share</string>
     <string name="plans">Explore Plans</string>
+    <string name="url">www.kfc.com</string>
+    <string name="gen_otp">Generate OTP</string>
+    <string name="otp_verification">OTP Verification :</string>
 
 </resources>

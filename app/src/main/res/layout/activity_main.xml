@@ -43,7 +43,7 @@
         android:layout_marginLeft="120dp"
         android:layout_marginTop="-35dp"
         android:elevation="30dp"
-        android:background=""
+        android:background="@color/transparent"
         android:src="@drawable/svgviewer_output4" />
 
 
@@ -107,7 +107,7 @@
         android:layout_marginLeft="125dp"
         android:layout_marginTop="-35dp"
         android:elevation="30dp"
-        android:background=""
+        android:background="@color/transparent"
         android:src="@drawable/qrimg" />
     <!--
     Warning: Using more than one drop shadow effect is not supported, only the last visible one will be used as elevation.

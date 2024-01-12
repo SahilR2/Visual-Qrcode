@@ -51,7 +51,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="1.0"
                 android:fontFamily="@font/metropolis_extrabold"
-                android:background="" />
+                android:background="@color/transparent"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
@@ -87,21 +87,24 @@
         android:id="@+id/ll_phone_num"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:orientation="horizontal"
+        android:background="@color/background"
         android:paddingStart="28dp"
         android:paddingEnd="28dp">
         <!-- CountryCodePicker -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            >
 
             <com.hbb20.CountryCodePicker
                 android:id="@+id/ccp"
                 android:layout_width="wrap_content"
-                android:layout_height="55dp"
-                android:background="@drawable/roundedcorners"
-                android:padding="10dp"
+                android:layout_height="45dp"
+                android:background="@drawable/roundedcornerwhite"
+                android:paddingStart="10dp"
+                app:ccp_textGravity="CENTER"
                 app:ccp_autoDetectCountry="true"
                 app:ccp_autoDetectLanguage="true"
                 app:ccp_countryAutoDetectionPref="SIM_ONLY"
@@ -109,7 +112,8 @@
                 app:ccp_rememberLastSelection="true"
                 app:ccp_showPhoneCode="true"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                />
 
             <!-- TextInputLayout -->
             <com.google.android.material.textfield.TextInputLayout
@@ -119,6 +123,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:focusedByDefault="false"
+                android:background="@drawable/roundedcornerwhite"
                 android:hint="@string/phone_number"
                 android:textColorHint="@color/black"
                 app:endIconMode="clear_text"
@@ -132,7 +137,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
-                    android:background="@color/background"
+                    android:background="@drawable/roundedcornerwhite"
                     android:elevation="10dp"
                     android:ems="10"
                     android:inputType="phone|number"
@@ -140,11 +145,111 @@
                     android:singleLine="true"
                     android:textColor="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp"
+        android:orientation="vertical"
+        >
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/downloadButton"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="@string/gen_otp"
+            android:layout_marginTop="24dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/metropolis_semibold"
+            android:textAllCaps="false"
+            android:textColor="@color/background"
+            android:background="@drawable/roundedcornerblues"
+            android:backgroundTint="@color/primary"
+            app:strokeColor="@color/primary"
+            app:strokeWidth="2dp"
+            app:cornerRadius="14dp">
+        </com.google.android.material.button.MaterialButton>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/otp_verification"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/metropolis_semibold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_otp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/roundedcornerwhite"
+            android:layout_marginTop="16dp"
+            android:paddingStart="16dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:fontFamily="@font/metropolis_semibold"
+                >
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp"
+        >
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_verify"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/roundedcornerblues"
+            android:text="Verify"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/metropolis_semibold"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            app:backgroundTint="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="6dp"
+            android:layout_marginEnd="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_cancel"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="14dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/roundedcornerwhite"
+            android:text="Cancel"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:textColor="@color/primary"
+            android:fontFamily="@font/metropolis_semibold"
+            app:backgroundTint="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="0dp"
+            android:layout_marginStart="8dp"/>
 
 
     </LinearLayout>
+
 
 
 </LinearLayout>

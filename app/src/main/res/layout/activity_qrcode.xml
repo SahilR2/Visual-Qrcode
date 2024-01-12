@@ -20,26 +20,24 @@
             android:layout_height="300dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="32dp"
-            android:scaleType="centerCrop" /> <!-- placeholder image -->
+            android:scaleType="centerCrop"
+            android:src="@drawable/template_qr"
+            /> <!-- placeholder image -->
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="www.kfc.com"
-            android:background="@drawable/rounded_edittext_states"
-            android:fontFamily="@font/metropolis_semibold"
-            android:padding="16dp"
-            android:textColorHint="#B4B4B4"
-            android:textColor="#000"
-            android:inputType="text"
-            android:longClickable="false"
-            android:shadowColor="#F5F5F5"
-            android:shadowDx="-2"
-            android:shadowDy="-2"
-            android:shadowRadius="1.5"
-            android:elevation="10dp"
-            >
-        </EditText>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/roundedcornerwhite"
+                android:paddingStart="16dp"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:hint="@string/url"
+                    android:fontFamily="@font/metropolis_semibold"
+                    >
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,44 +45,42 @@
             android:orientation="horizontal"
             android:layout_marginTop="24dp"
             >
-            <Button
+            <!-- Download Button -->
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/downloadButton"
                 android:layout_width="140dp"
                 android:layout_height="45dp"
-                android:layout_gravity="center_horizontal"
                 android:text="@string/download"
-                android:textAllCaps="false"
                 android:textSize="16sp"
-                android:background="@drawable/roundedbuttoncor"
-                android:textColor="@color/background"
                 android:fontFamily="@font/metropolis_semibold"
-                android:clickable="true"
-                android:focusable="true"
-                android:elevation="30dp"
-                android:padding="12dp"
-                android:layout_weight="1"
-                >
-            </Button>
+                android:textAllCaps="false"
+                android:textColor="@color/background"
+                android:background="@drawable/roundedcornerblues"
+                android:backgroundTint="@color/primary"
+                android:layout_marginEnd="12dp"
+                app:strokeColor="@color/primary"
+                app:strokeWidth="2dp"
+                app:cornerRadius="14dp">
+            </com.google.android.material.button.MaterialButton>
 
-            <Button
+            <!-- Share Button -->
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/shareButton"
                 android:layout_width="140dp"
-                android:layout_height="45dp"
-                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundedcornerwhite"
                 android:text="@string/share"
-                android:textAllCaps="false"
                 android:textSize="16sp"
-                android:background="@drawable/rounded_edittext_states"
-                android:textColor="@color/primary"
                 android:fontFamily="@font/metropolis_semibold"
-                android:clickable="true"
-                android:focusable="true"
-                android:elevation="30dp"
-                android:padding="12dp"
-                android:layout_weight="1"
-                >
-            </Button>
+                android:layout_marginStart="12dp"
+                android:backgroundTint="@color/white"
+                android:textAllCaps="false"
+                android:textColor="@color/primary">
+            </com.google.android.material.button.MaterialButton>
+
         </LinearLayout>
+
+
 
 
     </LinearLayout>
